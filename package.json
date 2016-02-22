@@ -4,7 +4,9 @@
   "description": "Vector based fill tool (like floodfill)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:serve",
+    "test:serve": "npm run serve -- --startPath='tests/'",
+    "serve": "browser-sync start --server --files='**, !jspm_packages, !node_modules'"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,8 @@
   "author": "Casper @ Doodle3D",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "chokidar-socket-emitter": "^0.5.0",
     "jspm": "^0.16.29"
   },
   "format": "esm",
@@ -29,14 +33,17 @@
     "lib": "lib"
   },
   "jspm": {
-    "jspmNodeConversion": false,
+    "directories": {
+      "lib": "lib"
+    },
     "dependencies": {
       "clipper-lib": "npm:clipper-lib@^1.0.0"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4"
+      "core-js": "npm:core-js@^1.1.4",
+      "tape": "npm:tape@^4.4.0"
     }
   }
 }
