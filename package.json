@@ -1,0 +1,42 @@
+{
+  "name": "fill-path",
+  "version": "0.0.1",
+  "description": "Vector based fill tool (like floodfill)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/Doodle3D/fill-path.git"
+  },
+  "keywords": [
+    "vector",
+    "fill",
+    "bucket",
+    "clipper",
+    "doodle3d",
+    "path",
+    "floodfill"
+  ],
+  "author": "Casper @ Doodle3D",
+  "license": "MIT",
+  "devDependencies": {
+    "jspm": "^0.16.29"
+  },
+  "format": "esm",
+  "directories": {
+    "lib": "lib"
+  },
+  "jspm": {
+    "jspmNodeConversion": false,
+    "dependencies": {
+      "clipper-lib": "npm:clipper-lib@^1.0.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
