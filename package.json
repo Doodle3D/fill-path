@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npm run test:serve",
     "test:serve": "npm run serve -- --startPath='tests/'",
+    "example": "npm run serve -- --startPath='example/'",
     "serve": "browser-sync start --server --files='**, !jspm_packages, !node_modules'"
   },
   "repository": {
