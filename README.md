@@ -18,9 +18,9 @@ Note: the `Point` argument gets rounded because `Clipper` needs `IntPoint` for p
 import fillPath from 'Doodle3D/fill-path';
 
 const paths = [rect(0, 0, 30, 30), rect(10, 10, 10, 10)];
-const fillPath = fillPath(paths, { x: 5, y: 5 });
+const result = fillPath(paths, { x: 5, y: 5 });
 
-// fillPath = [ [
+// result = [ [
 //   { x: 1, y: 1 },
 //   { x: 1, y: 29 },
 //   { x: 29, y: 29 },
