@@ -23,8 +23,8 @@ test('hit one closed path with hole', (assert) => {
   const paths = [rect(0, 0, 30, 30), rect(10, 10, 10, 10)];
   const actual = fillPath(paths, { x: 5, y: 5 });
   const expected = [ [ { x: 1, y: 1 }, { x: 1, y: 29 }, { x: 29, y: 29 }, { x: 29, y: 1 } ], [ { x: 21, y: 10 }, { x: 21, y: 20 }, { x: 20, y: 21 }, { x: 10, y: 21 }, { x: 9, y: 20 }, { x: 9, y: 10 }, { x: 10, y: 10 }, { x: 10, y: 9 }, { x: 20, y: 9 } ] ];
-  assert.ok(actual.length === 1, 'should generate one path')
-  assert.deepEqual(actual, expected, 'should generate empty path');
+  assert.ok(actual.length === 2, 'should generate two paths')
+  assert.deepEqual(actual, expected, 'should generate path with hole');
   assert.end();
 });
 
