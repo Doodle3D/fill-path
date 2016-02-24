@@ -1,6 +1,6 @@
 {
   "name": "fill-path",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Vector based fill tool (like floodfill)",
   "main": "lib/index.js",
   "scripts": {
