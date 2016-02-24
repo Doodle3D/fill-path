@@ -14,9 +14,20 @@ Point = { x: Number, y: Number };
 ```
 Note: the `Point` argument gets rounded because `Clipper` needs `IntPoint` for polygon collision.
 
+Include `fill-path`
+
+Using JSPM
 ```javascript
 import fillPath from 'Doodle3D/fill-path';
+```
 
+Using NPM
+```javascript
+const fillPath = require('fill-path');
+```
+
+Example code
+```javascript
 const paths = [rect(0, 0, 30, 30), rect(10, 10, 10, 10)];
 const result = fillPath(paths, { x: 5, y: 5 });
 
@@ -37,7 +48,7 @@ const result = fillPath(paths, { x: 5, y: 5 });
 //   { x: 20, y: 9 }
 // ] ]
 
-function rect(x = 0, y = 0, w = 10, h = 10) {
+function rect(x, y, w, h) {
   return [
     { x, y },
     { x: w + x, y },
@@ -46,4 +57,32 @@ function rect(x = 0, y = 0, w = 10, h = 10) {
     { x, y }
   ];
 }
+```
+
+# Installation
+
+Using NPM
+```
+npm install fill-path
+```
+
+using JSPM
+```
+jspm install github:Doodle3D/fill-path
+```
+
+# Clone Project
+```
+git clone git@github.com:Doodle3D/fill-path.git
+cd fill-path
+```
+
+# Test
+```
+npm run test
+```
+
+# Example
+```
+npm run example
 ```
