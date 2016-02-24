@@ -1,5 +1,5 @@
 import test from 'tape';
-import fillPath from '../lib/index.js';
+import fillPath from '../src/index.js';
 
 test('hit one closed path', (assert) => {
   const paths = [rect()];

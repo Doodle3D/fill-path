@@ -1,5 +1,7 @@
 import ClipperLib from 'clipper-lib';
 
+const OFFSET = 1.0;
+
 export default function(paths, point) {
   // convert lowercase x and y to capitalcase X and Y
   paths = mapLowerToCapital(paths);
@@ -20,6 +22,8 @@ export default function(paths, point) {
   // find shape with collision on mouse
   const shape = findHit(shapes, point);
 
+  // maybe offset shape to account for initial offset
+
   // convert capitalcase X and Y to lowercase x and y
   return mapCapitalToLower(shape);
 }
@@ -28,7 +32,7 @@ function createPathOffset(paths) {
   const offsetShapes = new ClipperLib.Paths();
   const clipperOffset = new ClipperLib.ClipperOffset();
   clipperOffset.AddPaths(paths, ClipperLib.JoinType.jtSquare, ClipperLib.EndType.etOpenButt);
-  clipperOffset.Execute(offsetShapes, 1.0);
+  clipperOffset.Execute(offsetShapes, OFFSET);
 
   // merge shapes.
   // each shape gets a clockwise outside path and a counter-clockwize inside path
