@@ -4,13 +4,13 @@
   "description": "Vector based fill tool (like floodfill)",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "npm run lib",
+    "prepublish": "npm run build",
     "test": "npm run test:node",
     "test:browser": "npm run serve -- --startPath='tests/'",
     "test:node": "node_modules/babel-cli/bin/babel-node.js tests/index.js",
     "example": "npm run serve -- --startPath='example/'",
     "serve": "browser-sync start --server --files='**, !jspm_packages, !node_modules'",
-    "lib": "node_modules/babel-cli/bin/babel.js src --out-dir lib"
+    "build": "node_modules/babel-cli/bin/babel.js src --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -50,7 +50,7 @@
   },
   "format": "esm",
   "directories": {
-    "lib": "lib"
+    "lib": "src"
   },
   "jspm": {
     "main": "index.js",
@@ -58,6 +58,7 @@
       "lib": "src"
     },
     "dependencies": {
+      "casperlamboo/ClipperJS": "github:casperlamboo/ClipperJS@master",
       "clipper-lib": "npm:clipper-lib@^1.0.0"
     },
     "devDependencies": {
@@ -68,6 +69,7 @@
     }
   },
   "dependencies": {
+    "clipper-js": "0.0.1",
     "clipper-lib": "^1.0.0"
   }
 }

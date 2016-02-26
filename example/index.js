@@ -1,4 +1,4 @@
-import fillPath from '/lib/index.js';
+import fillPath from '/src/index.js';
 
 const clear = document.getElementById('clear-button');
 const canvas = document.getElementById('canvas');

@@ -75,6 +75,8 @@ jspm install github:Doodle3D/fill-path
 ```
 git clone git@github.com:Doodle3D/fill-path.git
 cd fill-path
+npm install
+jspm install
 ```
 
 # Test
