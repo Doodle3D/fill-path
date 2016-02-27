@@ -58,7 +58,7 @@
       "lib": "src"
     },
     "dependencies": {
-      "casperlamboo/ClipperJS": "github:casperlamboo/ClipperJS@master",
+      "clipper-js": "github:Doodle3D/ClipperJS@master",
       "clipper-lib": "npm:clipper-lib@^1.0.0"
     },
     "devDependencies": {
