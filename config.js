@@ -16,11 +16,11 @@ System.config({
   map: {
     "babel": "npm:babel-core@5.8.35",
     "babel-runtime": "npm:babel-runtime@5.8.35",
-    "clipper-js": "github:casperlamboo/ClipperJS@master",
+    "clipper-js": "github:casperlamboo/clipper-js@master",
     "clipper-lib": "npm:clipper-lib@1.0.0",
     "core-js": "npm:core-js@1.2.6",
     "tape": "npm:tape@4.4.0",
-    "github:casperlamboo/ClipperJS@master": {
+    "github:casperlamboo/clipper-js@master": {
       "clipper-lib": "npm:clipper-lib@1.0.0"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
