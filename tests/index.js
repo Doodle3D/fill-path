@@ -4,7 +4,7 @@ import fillPath from '../src/index.js';
 test('hit one closed path', (assert) => {
   const paths = [rect()];
   const actual = fillPath(paths, { x: 5, y: 5 });
-  const expected = [ [ { x: 9, y: 1 }, { x: 9, y: 9 }, { x: 1, y: 9 }, { x: 1, y: 1 } ] ];
+  const expected = [[{ x: 10, y: 10 }, { x: 0, y: 10 }, { x: 0, y: 0 }, { x: 10, y: 0 }]];
   assert.ok(actual.length === 1, 'should generate one path')
   assert.deepEqual(actual, expected, 'should generate inner path');
   assert.end();
@@ -22,7 +22,7 @@ test('miss one closed path', (assert) => {
 test('hit one closed path with hole', (assert) => {
   const paths = [rect(0, 0, 30, 30), rect(10, 10, 10, 10)];
   const actual = fillPath(paths, { x: 5, y: 5 });
-  const expected = [ [ { x: 29, y: 1 }, { x: 29, y: 29 }, { x: 1, y: 29 }, { x: 1, y: 1 } ], [ { x: 20, y: 9 }, { x: 10, y: 9 }, { x: 10, y: 10 }, { x: 9, y: 10 }, { x: 9, y: 20 }, { x: 10, y: 21 }, { x: 20, y: 21 }, { x: 21, y: 20 }, { x: 21, y: 10 } ] ];
+  const expected =  [[{ x: 30, y: 30 }, { x: 0, y: 30 }, { x: 0, y: 0 }, { x: 30, y: 0 }], [{ x: 11, y: 10 }, { x: 11, y: 11 }, { x: 10, y: 11 }, { x: 10, y: 20 }, { x: 20, y: 20 }, { x: 20, y: 10 }]];
   assert.ok(actual.length === 2, 'should generate two paths')
   assert.deepEqual(actual, expected, 'should generate path with hole');
   assert.end();
