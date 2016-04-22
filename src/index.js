@@ -11,7 +11,7 @@ export default function(paths, point, { offset = 1.0, scale = 1.0, miterLimit = 
     // scale up for precision
     .scaleUp(scale)
     // convert lines to polygons (this gives lines width)
-    .offset(offset, { jointType: 'jtMiter', endType: 'etOpenButt', miterLimit })
+    .offset(offset, { jointType: 'jtMiter', endType: 'etOpenSquare', miterLimit })
     // union all overlapping paths
     .removeOverlap()
     // make all holes outlines and all outlines holes
