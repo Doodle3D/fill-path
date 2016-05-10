@@ -12,7 +12,7 @@ fillPath( Paths, Point, [ { LineWidth = 1.0, Scale = 10.0, MiterLimit = 2.0, Fil
 Paths = [...[...Point];
 Point = { x: Number, y: Number };
 
-Offset = Float;
+LineWidth = Float;
 Scale = Float;
 MiterLimit = Float;
 FillOffset = String;
