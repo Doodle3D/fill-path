@@ -7,7 +7,7 @@ Vector based fill tool (like floodfill) build with [Clipper](https://www.npmjs.c
 Include `fillPath` in your project. `fillPath` accepts two arguments, `paths` and `point`.
 
 ```javascript
-fillPath( Paths, Point, [ { Offset, Scale, MiterLimit } ] );
+fillPath( Paths, Point, [ { LineWidth = 1.0, Scale = 10.0, MiterLimit = 2.0, FillOffset = 'center' } ] );
 
 Paths = [...[...Point];
 Point = { x: Number, y: Number };
@@ -15,6 +15,7 @@ Point = { x: Number, y: Number };
 Offset = Float;
 Scale = Float;
 MiterLimit = Float;
+FillOffset = String;
 ```
 Note: the `Point` argument gets rounded because `Clipper` needs `IntPoint` for polygon collision.
 
