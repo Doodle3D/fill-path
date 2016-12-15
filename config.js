@@ -17,11 +17,10 @@ System.config({
     "babel": "npm:babel-core@5.8.35",
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "clipper-js": "github:casperlamboo/clipper-js@master",
-    "clipper-lib": "npm:clipper-lib@1.0.0",
     "core-js": "npm:core-js@1.2.6",
     "tape": "npm:tape@4.4.0",
     "github:casperlamboo/clipper-js@master": {
-      "clipper-lib": "npm:clipper-lib@1.0.0"
+      "clipper-lib": "npm:clipper-lib@6.2.1"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -62,7 +61,7 @@ System.config({
       "isarray": "npm:isarray@1.0.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:clipper-lib@1.0.0": {
+    "npm:clipper-lib@6.2.1": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:core-js@1.2.6": {
@@ -112,6 +111,15 @@ System.config({
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:is-date-object@1.0.1": {
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:is-regex@1.0.3": {
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:isarray@1.0.0": {
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:minimatch@3.0.0": {
       "brace-expansion": "npm:brace-expansion@1.1.3",
