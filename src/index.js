@@ -6,19 +6,19 @@ const OUTSIDE = 'outside';
 
 export default function(paths, point, {
   lineWidth = 1.0,
-  scale = 10.0,
+  precision = 0.1,
   miterLimit = 5.0,
   fillOffset = CENTER
 } = {}) {
   // calculate linewith
-  lineWidth *= scale / 2.0;
+  lineWidth /= precision * 2.0;
   // convert point to uppercase
-  point = { X: point.x * scale, Y: point.y * scale };
+  point = { X: point.x / precision, Y: point.y / precision };
 
   // create clipper shape
   const shape = new Shape(paths, false, true, true, true)
     // scale up for precision
-    .scaleUp(scale)
+    .scaleDown(precision)
     // convert lines to polygons (this gives lines width)
     .offset(lineWidth, { jointType: 'jtMiter', endType: 'etOpenSquare', miterLimit })
     // union all overlapping paths
@@ -54,7 +54,7 @@ export default function(paths, point, {
     // offset result to account for converting to polygon
     .offset(offset, { jointType: 'jtMiter', endType: 'etClosedPolygon', miterLimit })
     // scale down to accout for scale up
-    .scaleDown(scale)
+    .scaleUp(precision)
     // convert uppercase points to lowercase points
     .mapToLower();
 }
