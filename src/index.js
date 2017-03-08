@@ -7,7 +7,7 @@ const OUTSIDE = 'outside';
 export default function(paths, point, {
   lineWidth = 1.0,
   scale = 10.0,
-  miterLimit = 2.0,
+  miterLimit = 5.0,
   fillOffset = CENTER
 } = {}) {
   // calculate linewith
