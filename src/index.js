@@ -20,7 +20,7 @@ export default function(paths, point, {
     // scale up for precision
     .scaleDown(precision)
     // convert lines to polygons (this gives lines width)
-    .offset(1.0, { jointType: 'jtMiter', endType: 'etOpenSquare', miterLimit: 1.0 })
+    .offset(2.0, { jointType: 'jtMiter', endType: 'etOpenSquare', miterLimit: 1.0 })
     // union all overlapping paths
     .removeOverlap()
     // make all holes outlines and all outlines holes
@@ -37,16 +37,16 @@ export default function(paths, point, {
   let offset;
   switch (fillOffset) {
     case CENTER:
-      offset = 1.0;
+      offset = 2.0;
       break;
     case INSIDE:
-      offset = 1.0 - lineWidth;
+      offset = 2.0 - lineWidth;
       break;
     case OUTSIDE:
-      offset = 1.0 + lineWidth;
+      offset = 2.0 + lineWidth;
       break;
     default:
-      offset = 1.0;
+      offset = 2.0;
       break;
   }
 
