@@ -16,9 +16,12 @@ export default function(paths, point, {
   point = { X: point.x * scale, Y: point.y * scale };
 
   // create clipper shape
-  const shape = new Shape(paths, false, true, true, true)
+  const shape = new Shape(paths, false, true)
     // scale up for precision
     .scaleUp(scale)
+    // cleanup shape
+    .round()
+    .removeDuplicates()
     // convert lines to polygons (this gives lines width)
     .offset(lineWidth, { jointType: 'jtMiter', endType: 'etOpenSquare', miterLimit })
     // union all overlapping paths
