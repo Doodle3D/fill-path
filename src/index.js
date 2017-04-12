@@ -25,7 +25,7 @@ export default function(paths, point, {
     // convert lines to polygons (this gives lines width)
     .offset(lineWidth, { jointType: 'jtMiter', endType: 'etOpenSquare', miterLimit })
     // union all overlapping paths
-    .removeOverlap()
+    .simplify('pftNonZero')
     // make all holes outlines and all outlines holes
     .reverse()
     // seperate all shapes into (these all all plausible fills)

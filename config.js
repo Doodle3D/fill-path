@@ -16,10 +16,10 @@ System.config({
   map: {
     "babel": "npm:babel-core@5.8.35",
     "babel-runtime": "npm:babel-runtime@5.8.35",
-    "clipper-js": "github:Doodle3D/clipper-js@1.0.0",
+    "clipper-js": "github:Doodle3D/clipper-js@1.0.2",
     "core-js": "npm:core-js@1.2.6",
     "tape": "npm:tape@4.4.0",
-    "github:Doodle3D/clipper-js@1.0.0": {
+    "github:Doodle3D/clipper-js@1.0.2": {
       "clipper-lib": "npm:clipper-lib@6.2.1"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
