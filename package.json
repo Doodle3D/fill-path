@@ -1,5 +1,5 @@
 {
-  "name": "fill-path",
+  "name": "@doodle3d/fill-path",
   "version": "1.0.6",
   "description": "Vector based fill tool (like floodfill)",
   "main": "lib/index.js",
