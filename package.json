@@ -1,6 +1,6 @@
 {
-  "name": "fill-path",
-  "version": "1.0.6",
+  "name": "@doodle3d/fill-path",
+  "version": "1.0.7",
   "description": "Vector based fill tool (like floodfill)",
   "main": "lib/index.js",
   "scripts": {
@@ -68,6 +68,6 @@
     }
   },
   "dependencies": {
-    "clipper-js": "1.0.2"
+    "@doodle3d/clipper-js": "^1.0.3"
   }
 }
