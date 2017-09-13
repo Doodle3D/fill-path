@@ -58,7 +58,7 @@
       "lib": "src"
     },
     "dependencies": {
-      "clipper-js": "github:Doodle3D/clipper-js@^1.0.2"
+      "clipper-js": "github:Doodle3D/clipper-js@^1.0.7"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
