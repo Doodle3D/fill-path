@@ -68,6 +68,7 @@
     }
   },
   "dependencies": {
+    "@doodle3d/clipper-js": "^1.0.7",
     "clipper-js": "1.0.2"
   }
 }
