@@ -1,4 +1,4 @@
-import Shape from 'clipper-js';
+import Shape from '@doodle3d/clipper-js';
 
 const CENTER = 'center';
 const INSIDE = 'inside';
@@ -28,8 +28,8 @@ export default function(paths, point, {
     .simplify('pftNonZero')
     // make all holes outlines and all outlines holes
     .reverse()
-    // seperate all shapes into (these all all plausible fills)
-    .seperateShapes()
+    // separate all shapes into (these all all plausible fills)
+    .separateShapes()
     // find shape with hit
     .find(fill => fill.pointInShape(point));
 
